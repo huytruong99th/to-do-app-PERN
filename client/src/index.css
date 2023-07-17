@@ -1,0 +1,185 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+
+.app {
+  background-color:rgb(255, 255, 237);
+  box-shadow: rgba(0, 0, 0, 0.05) 3px 3px 5px;
+  margin-top: 100px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  width: 60vw;
+}
+
+/*For List Header And Child*/
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: rgba(0, 0, 0, 0.1) 3px solid;
+  margin-bottom: 30px;
+}
+
+.list-header .button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+/*For List Item*/
+.list-item {
+  width: auto;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.list-item .info-container, .list-item .button-container {
+  display: flex;
+  align-items: center;
+}
+
+.list-item .info-container {
+  width: 60%;
+  justify-content: space-between;
+}
+
+.tick-icon {
+  fill: #2E8B57;
+}
+
+/*For Button*/
+.edit:hover {
+  background-color: rgb(182, 223, 186);
+}
+
+.edit:active {
+  border: 2px solid rgb(141, 181, 145);
+  color: rgb(255, 255, 255);
+  background-color: rgb(141, 181, 145);
+  
+}
+
+.delete:hover {
+  border-color: #000000;
+  border-style: solid;
+  color: #000000;
+  background-color: #ff3838;
+}
+
+.delete:active {
+  border-color: #ff3838;
+  border-style: solid;
+  color: #ffffff;
+  background-color: #ff3838;
+}
+
+.create-btn:hover, .create:hover {
+  background-color: rgb(182, 223, 186);
+}
+
+.create-btn:active, .create:active {
+  border: 2px solid rgb(141, 181, 145);
+  color: rgb(255, 255, 255);
+  background-color: rgb(141, 181, 145);
+  
+}
+
+.signout-btn:hover {
+  background-color: rgb(190, 190, 190);
+}
+
+.signout-btn:active {
+  border: 2px solid rgb(190, 190, 190);
+  color: rgb(255, 255, 255);
+  background-color: rgb(190, 190, 190);
+}
+
+/*Modal*/
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+}
+
+.modal .form-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal .form-title-container button {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: transparent;
+  font-weight: 600;
+  color: #000000;
+  font-size: 1.125rem;
+}
+
+.modal .form-title-container button:hover {
+  border: 2px solid #ff3838;
+  color: #ff3838;
+}
+
+.modal .form-title-container button:active {
+  background-color: #ff3838;
+  color: #ffffff;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 8px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 2px solid rgba(104, 104, 104, 0.3);
+}
+
+input.edit {
+  font-weight: 600;
+  border: 2px solid #000000;
+}
+
+input.create {
+  font-weight: 600;
+  border: 2px solid #000000;
+}
