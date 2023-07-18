@@ -5,11 +5,13 @@ const cors = require('cors');
 const { v4: uuidv4 } = require('uuid')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const path = require('path')
 
 const PORT = process.env.PORT || 8000;
 
 app.use(cors())
 app.use(express.json())
+app.use('/static', express.static(path.join(__dirname, 'build')))
 
 app.get('/todos/:userEmail', async (req, res) => {
     const { userEmail } = req.params
