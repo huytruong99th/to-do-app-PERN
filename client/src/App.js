@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import ListHeader from "./components/ListHeader";
 import ListItem from "./components/ListItem"
+import Auth from "./components/Auth";
+import { useCookies } from "react-cookie";
 
 function App() {
+  const [cookies, setCookie, removeCookie] = useCookies(null)
+  const userEmail = cookies.Email
+  const authToken = cookies.AuthToken
   const [ tasks, setTasks ] = useState(null)
-  const userEmail = 'huytruong99th@outlook.com'
 
   const getData = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/todos/${userEmail}`)
+      const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${userEmail}`)
       const jsonData = await response.json()
       setTasks(jsonData)
     } catch(err) {
@@ -16,7 +20,11 @@ function App() {
     }
   };
 
-  useEffect( () => getData, []);
+  useEffect( () => {
+    if (authToken) {
+      getData()
+    }
+  }, [authToken]);
 
   console.log(tasks)
 
@@ -24,8 +32,14 @@ function App() {
 
   return (
     <div className="app">
-      <ListHeader listName={'💻 Coding To Do List'} getData={getData} />
-      {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)}
+      { !authToken && <Auth />}
+      { authToken &&
+        <>
+        <ListHeader listName={'💻 Coding To Do List'} getData={getData} />
+        {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)}
+        </>
+      }
+    
     </div>
   );
 }
