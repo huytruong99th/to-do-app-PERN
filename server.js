@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000;
 
 app.use(cors())
 app.use(express.json())
-app.use('/static', express.static(path.join(__dirname, 'build')))
+app.use(express.static('build'));
 
 app.get('/todos/:userEmail', async (req, res) => {
     const { userEmail } = req.params

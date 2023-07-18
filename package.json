@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server.js",
-    "devServer": "cross-env NODE_ENV=development nodemon",
-    "client": "npm start --prefix ./../client",
-    "dev": "concurrently \"npm run devServer\" \"npm run client\""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ./client && npm run build --prod && cp -r build ../"
   },
   "author": "",
   "license": "ISC",
