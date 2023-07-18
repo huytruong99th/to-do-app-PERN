@@ -1,6 +1,6 @@
 
 body {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,12 +25,30 @@ body {
   align-items: center;
   justify-content: space-between;
   border-bottom: rgba(0, 0, 0, 0.1) 3px solid;
+  padding-bottom: 20px;
   margin-bottom: 30px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .list-header .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-name p {
+  margin-bottom: 5px;
+}
+
+.user-name p span{
+  color: #2E8B57;
+  font-weight: 600;
+  font-size: 1.125rem;
 }
 
 .button-container button {
@@ -59,12 +77,17 @@ body {
 }
 
 .list-item .info-container {
-  width: 60%;
+  width: 70%;
   justify-content: space-between;
 }
 
 .tick-icon {
-  fill: #2E8B57;
+}
+
+p.task-title {
+  width: 250px;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 /*For Button*/
@@ -182,4 +205,53 @@ input.edit {
 input.create {
   font-weight: 600;
   border: 2px solid #000000;
+}
+
+/*Auth*/
+
+.auth {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.auth-container {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.auth-container form h1 {
+ text-align: center;
+ color:#2E8B57
+}
+
+
+.auth-options button {
+  font-weight: 600;
+  width: 50%;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffffff;
+}
+
+/*Modal*/
+.outer-bar {
+  width: 200px;
+  height: 12px;
+  background-color: rgb(177, 177, 177);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.inner-bar {
+  height: 12px;
+  background-color: #2E8B57;
 }
