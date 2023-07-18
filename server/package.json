@@ -2,12 +2,14 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server.js",
-    "devServer": "cross-env NODE_ENV=development nodemon",
-    "client": "npm start --prefix ./../client",
-    "dev": "concurrently \"npm run devServer\" \"npm run client\""
+    "start": "nodemon server.js",
+    "deploy": "node server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+    
   },
   "author": "",
   "license": "ISC",
