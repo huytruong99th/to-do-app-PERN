@@ -9,6 +9,10 @@ body {
   background-color: antiquewhite;
 }
 
+input {
+  font-size: 16px;
+}
+
 .app {
   background-color:rgb(255, 255, 237);
   box-shadow: rgba(0, 0, 0, 0.05) 3px 3px 5px;
@@ -168,7 +172,7 @@ p.task-title {
   width: 28px;
   height: 28px;
   border: 2px solid #000000;
-  border-radius: 50%;
+  border-radius: 30px;
   background-color: transparent;
   font-weight: 600;
   color: #000000;
@@ -307,4 +311,5 @@ input.create {
   .user-name p {
     text-align: center;
   }
+
 }
