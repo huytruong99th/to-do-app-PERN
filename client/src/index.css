@@ -303,8 +303,4 @@ input.create {
     justify-content: center;
     align-items: center;
   }
-
-  .user-name p {
-    text-align: center;
-  }
 }
