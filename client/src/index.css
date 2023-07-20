@@ -297,4 +297,10 @@ input.create {
     justify-content: center;
     margin-bottom: 10px;
   }
+
+  .user-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
